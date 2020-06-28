@@ -1,0 +1,9 @@
+C:\Users\fabio\OneDrive\Desktop\All Projects\C#\DisTrackProject\DisTrack.Data\bin\Debug\netcoreapp3.1\DisTrack.Data.deps.json
+C:\Users\fabio\OneDrive\Desktop\All Projects\C#\DisTrackProject\DisTrack.Data\bin\Debug\netcoreapp3.1\DisTrack.Data.dll
+C:\Users\fabio\OneDrive\Desktop\All Projects\C#\DisTrackProject\DisTrack.Data\bin\Debug\netcoreapp3.1\DisTrack.Data.pdb
+C:\Users\fabio\OneDrive\Desktop\All Projects\C#\DisTrackProject\DisTrack.Data\obj\Debug\netcoreapp3.1\DisTrack.Data.csprojAssemblyReference.cache
+C:\Users\fabio\OneDrive\Desktop\All Projects\C#\DisTrackProject\DisTrack.Data\obj\Debug\netcoreapp3.1\DisTrack.Data.AssemblyInfoInputs.cache
+C:\Users\fabio\OneDrive\Desktop\All Projects\C#\DisTrackProject\DisTrack.Data\obj\Debug\netcoreapp3.1\DisTrack.Data.AssemblyInfo.cs
+C:\Users\fabio\OneDrive\Desktop\All Projects\C#\DisTrackProject\DisTrack.Data\obj\Debug\netcoreapp3.1\DisTrack.Data.csproj.CoreCompileInputs.cache
+C:\Users\fabio\OneDrive\Desktop\All Projects\C#\DisTrackProject\DisTrack.Data\obj\Debug\netcoreapp3.1\DisTrack.Data.dll
+C:\Users\fabio\OneDrive\Desktop\All Projects\C#\DisTrackProject\DisTrack.Data\obj\Debug\netcoreapp3.1\DisTrack.Data.pdb

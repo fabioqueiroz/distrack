@@ -1,0 +1,297 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\fabio\\OneDrive\\Desktop\\All Projects\\C#\\DisTrackProject\\DisTrackProject\\DisTrackProject.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\fabio\\OneDrive\\Desktop\\All Projects\\C#\\DisTrackProject\\DisTrack.Data.Access\\DisTrack.Data.Access.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\fabio\\OneDrive\\Desktop\\All Projects\\C#\\DisTrackProject\\DisTrack.Data.Access\\DisTrack.Data.Access.csproj",
+        "projectName": "DisTrack.Data.Access",
+        "projectPath": "C:\\Users\\fabio\\OneDrive\\Desktop\\All Projects\\C#\\DisTrackProject\\DisTrack.Data.Access\\DisTrack.Data.Access.csproj",
+        "packagesPath": "C:\\Users\\fabio\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\fabio\\OneDrive\\Desktop\\All Projects\\C#\\DisTrackProject\\DisTrack.Data.Access\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\fabio\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/afintechnologies/_packaging/Buxbo/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "C:\\Users\\fabio\\OneDrive\\Desktop\\All Projects\\C#\\DisTrackProject\\DisTrack.Data\\DisTrack.Data.csproj": {
+                "projectPath": "C:\\Users\\fabio\\OneDrive\\Desktop\\All Projects\\C#\\DisTrackProject\\DisTrack.Data\\DisTrack.Data.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.0.35, )"
+            },
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[2.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\fabio\\OneDrive\\Desktop\\All Projects\\C#\\DisTrackProject\\DisTrack.Data\\DisTrack.Data.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\fabio\\OneDrive\\Desktop\\All Projects\\C#\\DisTrackProject\\DisTrack.Data\\DisTrack.Data.csproj",
+        "projectName": "DisTrack.Data",
+        "projectPath": "C:\\Users\\fabio\\OneDrive\\Desktop\\All Projects\\C#\\DisTrackProject\\DisTrack.Data\\DisTrack.Data.csproj",
+        "packagesPath": "C:\\Users\\fabio\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\fabio\\OneDrive\\Desktop\\All Projects\\C#\\DisTrackProject\\DisTrack.Data\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\fabio\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/afintechnologies/_packaging/Buxbo/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\fabio\\OneDrive\\Desktop\\All Projects\\C#\\DisTrackProject\\DisTrack.Domain\\DisTrack.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\fabio\\OneDrive\\Desktop\\All Projects\\C#\\DisTrackProject\\DisTrack.Domain\\DisTrack.Domain.csproj",
+        "projectName": "DisTrack.Domain",
+        "projectPath": "C:\\Users\\fabio\\OneDrive\\Desktop\\All Projects\\C#\\DisTrackProject\\DisTrack.Domain\\DisTrack.Domain.csproj",
+        "packagesPath": "C:\\Users\\fabio\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\fabio\\OneDrive\\Desktop\\All Projects\\C#\\DisTrackProject\\DisTrack.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\fabio\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/afintechnologies/_packaging/Buxbo/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "C:\\Users\\fabio\\OneDrive\\Desktop\\All Projects\\C#\\DisTrackProject\\DisTrack.Data.Access\\DisTrack.Data.Access.csproj": {
+                "projectPath": "C:\\Users\\fabio\\OneDrive\\Desktop\\All Projects\\C#\\DisTrackProject\\DisTrack.Data.Access\\DisTrack.Data.Access.csproj"
+              },
+              "C:\\Users\\fabio\\OneDrive\\Desktop\\All Projects\\C#\\DisTrackProject\\DisTrack.Data\\DisTrack.Data.csproj": {
+                "projectPath": "C:\\Users\\fabio\\OneDrive\\Desktop\\All Projects\\C#\\DisTrackProject\\DisTrack.Data\\DisTrack.Data.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\fabio\\OneDrive\\Desktop\\All Projects\\C#\\DisTrackProject\\DisTrackProject\\DisTrackProject.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\fabio\\OneDrive\\Desktop\\All Projects\\C#\\DisTrackProject\\DisTrackProject\\DisTrackProject.csproj",
+        "projectName": "DisTrackProject",
+        "projectPath": "C:\\Users\\fabio\\OneDrive\\Desktop\\All Projects\\C#\\DisTrackProject\\DisTrackProject\\DisTrackProject.csproj",
+        "packagesPath": "C:\\Users\\fabio\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\fabio\\OneDrive\\Desktop\\All Projects\\C#\\DisTrackProject\\DisTrackProject\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\fabio\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/afintechnologies/_packaging/Buxbo/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "C:\\Users\\fabio\\OneDrive\\Desktop\\All Projects\\C#\\DisTrackProject\\DisTrack.Data.Access\\DisTrack.Data.Access.csproj": {
+                "projectPath": "C:\\Users\\fabio\\OneDrive\\Desktop\\All Projects\\C#\\DisTrackProject\\DisTrack.Data.Access\\DisTrack.Data.Access.csproj"
+              },
+              "C:\\Users\\fabio\\OneDrive\\Desktop\\All Projects\\C#\\DisTrackProject\\DisTrack.Domain\\DisTrack.Domain.csproj": {
+                "projectPath": "C:\\Users\\fabio\\OneDrive\\Desktop\\All Projects\\C#\\DisTrackProject\\DisTrack.Domain\\DisTrack.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "AWSSDK.Extensions.NETCore.Setup": {
+              "target": "Package",
+              "version": "[3.3.100.1, )"
+            },
+            "AWSSDK.S3": {
+              "target": "Package",
+              "version": "[3.3.110.58, )"
+            },
+            "Amazon.Lambda.AspNetCoreServer": {
+              "target": "Package",
+              "version": "[5.1.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
