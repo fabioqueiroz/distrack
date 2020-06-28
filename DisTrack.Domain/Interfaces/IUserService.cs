@@ -1,4 +1,5 @@
-﻿using DisTrack.Data;
+﻿using DisTrack.Commons.Models;
+using DisTrack.Data;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -9,6 +10,7 @@ namespace DisTrack.Domain.Interfaces
     public interface IUserService
     {
         Task<bool> AddUser(User user);
-        Task<User> GetUserByEmail(string email);
+        User GetUserByEmail(string email);
+        Task<UserModel> UpdateUserDetails(UserModel user);
     }
 }

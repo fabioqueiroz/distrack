@@ -12,3 +12,5 @@ C:\Users\fabio\OneDrive\Desktop\All Projects\C#\DisTrackProject\DisTrack.Domain\
 C:\Users\fabio\OneDrive\Desktop\All Projects\C#\DisTrackProject\DisTrack.Domain\obj\Debug\netcoreapp3.1\DisTrack.Domain.dll
 C:\Users\fabio\OneDrive\Desktop\All Projects\C#\DisTrackProject\DisTrack.Domain\obj\Debug\netcoreapp3.1\DisTrack.Domain.pdb
 C:\Users\fabio\OneDrive\Desktop\All Projects\C#\DisTrackProject\DisTrack.Domain\obj\Debug\netcoreapp3.1\DisTrack.Domain.csprojAssemblyReference.cache
+C:\Users\fabio\OneDrive\Desktop\All Projects\C#\DisTrackProject\DisTrack.Domain\bin\Debug\netcoreapp3.1\DisTrack.Commons.dll
+C:\Users\fabio\OneDrive\Desktop\All Projects\C#\DisTrackProject\DisTrack.Domain\bin\Debug\netcoreapp3.1\DisTrack.Commons.pdb

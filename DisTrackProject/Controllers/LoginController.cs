@@ -1,9 +1,12 @@
-﻿using DisTrack.Constants;
+﻿using DisTrack.Commons.Models;
+using DisTrack.Constants;
+using DisTrack.Domain.Interfaces;
 using DisTrack.Helper;
 using DisTrack.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Net;
 using System.Threading.Tasks;
@@ -14,9 +17,10 @@ namespace DisTrack.Controllers
     [Route("[controller]")]
     public class LoginController : Controller
     {
-        public LoginController()
+        private readonly IUserService _userService;
+        public LoginController(IUserService userService)
         {
-
+            _userService = userService;
         }
 
         [HttpGet]
@@ -27,55 +31,78 @@ namespace DisTrack.Controllers
 
         [HttpPost]
         public IActionResult SignInUser([FromBody]LoginViewModel loginDetails)
-        {
+        {          
             try
             {
+                if (!ModelState.IsValid || loginDetails == null)
+                {
+                    return BadRequest();
+                }
+
                 if (!string.IsNullOrEmpty(loginDetails.Email) && !string.IsNullOrEmpty(loginDetails.Password))
                 {
                     var hashedPassword = PasswordEncryption.SHA512ComputeHash(loginDetails.Password);
-                    var db = new FakeDatabase();
 
-                    if (db.FakeUsers.ContainsKey(loginDetails.Email) && db.FakeUsers.Values.Contains(hashedPassword))
+                    var userInDb = _userService.GetUserByEmail(loginDetails.Email);
+
+                    if (userInDb.Password.Equals(hashedPassword))
                     {
                         return Ok("Login successful");
                     }
+
                 }
             }
             catch (WebException ex)
             {
-                throw new WebException(ex.Message);
+                Trace.TraceError(ex.Message);
+                throw new WebException();
             }
 
             return BadRequest("Incorrect login details");
         }
 
         [HttpPost]
-        [Route("SignUp")]
-        public IActionResult CreateUser([FromBody]LoginViewModel loginDetails)
+        [Route("ChangePassword")]
+        public IActionResult UpdatePassword([FromBody]LoginViewModel loginDetails)
         {
             var hashedPassword = PasswordEncryption.SHA512ComputeHash(loginDetails.Password);
-            var db = new FakeDatabase();
 
             try
             {
+                if (!ModelState.IsValid || loginDetails == null)
+                {
+                    return BadRequest();
+                }
+
                 if (!string.IsNullOrEmpty(loginDetails.Email) && !string.IsNullOrEmpty(loginDetails.Password))
                 {
-                    if (!db.FakeUsers.ContainsKey(loginDetails.Email))
+                    var userInDb = _userService.GetUserByEmail(loginDetails.Email);
+
+                    if (userInDb.Password.Equals(hashedPassword))
                     {
-                        db.FakeUsers.Add(loginDetails.Email, hashedPassword);
+                        var userModel = new UserModel
+                        {
+                            Id = userInDb.Id,
+                            UserName = userInDb.UserName,
+                            Email = loginDetails.Email,
+                            Password = loginDetails.Password
+                        };
+
+                        _userService.UpdateUserDetails(userModel);
+
+                        return Ok("Password changed");
                     }
 
-                    return Ok("New account created");
                 }
                     
             }
-
             catch (WebException ex)
             {
-                throw new WebException(ex.Message);
+                Trace.TraceError(ex.Message);
+                throw new WebException();
             }
 
-            return BadRequest("Unable to sign up");
+            return BadRequest("Unable to sign in");
 
         }
 

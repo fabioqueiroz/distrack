@@ -1,4 +1,5 @@
-﻿using DisTrack.Data;
+﻿using DisTrack.Commons.Models;
+using DisTrack.Data;
 using DisTrack.Data.Access.RepositoryInterfaces;
 using DisTrack.Domain.Interfaces;
 using Microsoft.Data.SqlClient;
@@ -33,17 +34,39 @@ namespace DisTrack.Domain.Services
 
         }
 
-        public async Task<User> GetUserByEmail(string email)
+        public User GetUserByEmail(string email)
         {
             try
             {
-                return await _repository.GetSingleAsync<User>(x => x.Email.Equals(email));
+                return _repository.GetSingle<User>(x => x.Email.Equals(email));
             }
             catch (SqlException ex)
             {
                 throw new Exception(ex.Message);
             }
 
+        }
+
+        public async Task<UserModel> UpdateUserDetails(UserModel user)
+        {
+            try
+            {
+                var userInDb = await _repository.GetSingleAsync<User>(x => x.Id == user.Id);
+
+                userInDb.UserName = user.UserName;
+                userInDb.Email = user.Email;
+                userInDb.Password = userInDb.Password;
+
+                _repository.Update<User>(userInDb);
+                await _repository.CommitAsync();
+
+                return user;
+
+            }
+            catch (SqlException ex)
+            {
+                throw new Exception(ex.Message);
+            }
         }
     }
 }

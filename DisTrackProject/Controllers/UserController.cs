@@ -25,7 +25,7 @@ namespace DisTrackProject.Controllers
         {
             if (ModelState.IsValid)
             {
-                var checkEmailInDb = await _userService.GetUserByEmail(userViewModel.Email);
+                var checkEmailInDb = _userService.GetUserByEmail(userViewModel.Email);
 
                 if (checkEmailInDb == null)
                 {

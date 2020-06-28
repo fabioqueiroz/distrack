@@ -11,11 +11,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2. Domain", "2. Domain", "{
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3. Data Access", "3. Data Access", "{A8C5957B-C228-4F27-B524-BD6A3239A6C9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DisTrack.Data", "DisTrack.Data\DisTrack.Data.csproj", "{13A8978C-EABE-49F5-AC23-9F56C8197D91}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DisTrack.Data", "DisTrack.Data\DisTrack.Data.csproj", "{13A8978C-EABE-49F5-AC23-9F56C8197D91}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DisTrack.Data.Access", "DisTrack.Data.Access\DisTrack.Data.Access.csproj", "{9815ECDE-2622-497E-96B6-E7DAA20DE928}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DisTrack.Data.Access", "DisTrack.Data.Access\DisTrack.Data.Access.csproj", "{9815ECDE-2622-497E-96B6-E7DAA20DE928}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DisTrack.Domain", "DisTrack.Domain\DisTrack.Domain.csproj", "{8FFCFD25-EA88-4094-8EF3-659C96004395}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DisTrack.Domain", "DisTrack.Domain\DisTrack.Domain.csproj", "{8FFCFD25-EA88-4094-8EF3-659C96004395}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0. Commons", "0. Commons", "{0CBDC820-E4E0-4CAD-AE27-BDBDF97CA9C2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DisTrack.Commons", "DisTrack.Commons\DisTrack.Commons.csproj", "{7412CDB7-D6F3-49B3-B8CB-E33AF9E7CBE3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +43,10 @@ Global
 		{8FFCFD25-EA88-4094-8EF3-659C96004395}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8FFCFD25-EA88-4094-8EF3-659C96004395}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8FFCFD25-EA88-4094-8EF3-659C96004395}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7412CDB7-D6F3-49B3-B8CB-E33AF9E7CBE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7412CDB7-D6F3-49B3-B8CB-E33AF9E7CBE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7412CDB7-D6F3-49B3-B8CB-E33AF9E7CBE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7412CDB7-D6F3-49B3-B8CB-E33AF9E7CBE3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -48,6 +56,7 @@ Global
 		{13A8978C-EABE-49F5-AC23-9F56C8197D91} = {A8C5957B-C228-4F27-B524-BD6A3239A6C9}
 		{9815ECDE-2622-497E-96B6-E7DAA20DE928} = {A8C5957B-C228-4F27-B524-BD6A3239A6C9}
 		{8FFCFD25-EA88-4094-8EF3-659C96004395} = {9A2A2798-9AED-4222-AC96-EC6DEBDABD96}
+		{7412CDB7-D6F3-49B3-B8CB-E33AF9E7CBE3} = {0CBDC820-E4E0-4CAD-AE27-BDBDF97CA9C2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F3655F06-5C17-4483-BC70-CD958C7154EB}

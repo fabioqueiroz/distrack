@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\DisTrack.Commons\DisTrack.Commons.csproj" />
     <ProjectReference Include="..\DisTrack.Data.Access\DisTrack.Data.Access.csproj" />
     <ProjectReference Include="..\DisTrack.Data\DisTrack.Data.csproj" />
   </ItemGroup>

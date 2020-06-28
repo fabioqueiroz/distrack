@@ -10,11 +10,14 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Rubrics.Data.Access;
 using Rubrics.Data.Access.ConnectionFactory;
+
 
 namespace DisTrackProject
 {
@@ -40,10 +43,14 @@ namespace DisTrackProject
 
             services
                 .AddScoped<IUserService, UserService>()
+                .AddScoped<ITripService, TripService>()
                 .AddScoped<IDisTrackRepository, DisTrackRepository>();
 
-            services.AddControllers();
+            services.AddControllers().AddNewtonsoftJson();
 
+            services.AddDbContext<Context>(options =>
+                options.UseSqlServer(
+                    Configuration.GetConnectionString("DefaultConnection"), opts => opts.CommandTimeout((int)TimeSpan.FromMinutes(10).TotalSeconds)));
             // Add S3 to the ASP.NET Core dependency injection framework.
             services.AddAWSService<Amazon.S3.IAmazonS3>();
         }

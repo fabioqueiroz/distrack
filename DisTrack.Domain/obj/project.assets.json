@@ -1530,6 +1530,16 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "DisTrack.Commons/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/DisTrack.Commons.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DisTrack.Commons.dll": {}
+        }
+      },
       "DisTrack.Data/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
@@ -5785,6 +5795,11 @@
         "system.xml.xmlserializer.nuspec"
       ]
     },
+    "DisTrack.Commons/1.0.0": {
+      "type": "project",
+      "path": "../DisTrack.Commons/DisTrack.Commons.csproj",
+      "msbuildProject": "../DisTrack.Commons/DisTrack.Commons.csproj"
+    },
     "DisTrack.Data/1.0.0": {
       "type": "project",
       "path": "../DisTrack.Data/DisTrack.Data.csproj",
@@ -5798,6 +5813,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "DisTrack.Commons >= 1.0.0",
       "DisTrack.Data >= 1.0.0",
       "DisTrack.Data.Access >= 1.0.0"
     ]
@@ -5833,6 +5849,9 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
+            "C:\\Users\\fabio\\OneDrive\\Desktop\\All Projects\\C#\\DisTrackProject\\DisTrack.Commons\\DisTrack.Commons.csproj": {
+              "projectPath": "C:\\Users\\fabio\\OneDrive\\Desktop\\All Projects\\C#\\DisTrackProject\\DisTrack.Commons\\DisTrack.Commons.csproj"
+            },
             "C:\\Users\\fabio\\OneDrive\\Desktop\\All Projects\\C#\\DisTrackProject\\DisTrack.Data.Access\\DisTrack.Data.Access.csproj": {
               "projectPath": "C:\\Users\\fabio\\OneDrive\\Desktop\\All Projects\\C#\\DisTrackProject\\DisTrack.Data.Access\\DisTrack.Data.Access.csproj"
             },
