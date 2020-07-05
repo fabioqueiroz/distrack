@@ -29,6 +29,7 @@ namespace DisTrack.Domain.Services
             {
                 trips.Add(new TripModel 
                 {
+                    Id = trip.Id,
                     Departure = trip.Departure,
                     Destination = trip.Destination,
                     ArrivalTime = trip.ArrivalTime,

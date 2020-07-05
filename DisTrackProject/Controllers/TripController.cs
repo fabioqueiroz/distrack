@@ -47,7 +47,7 @@ namespace DisTrack.Controllers
             var month = trips.OrderBy(x => x.DepartureTime.Month);
             var week = trips.OrderBy(x => DateManager.GetWeekOfTheYear(x.DepartureTime));
 
-            return Ok(trips);
+            return Ok(month);
         }
 
         [HttpGet("{id}")]
