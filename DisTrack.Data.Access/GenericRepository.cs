@@ -8,7 +8,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Rubrics.Data.Access
+namespace DisTrack.Data.Access
 {
 
     public abstract class GenericRepository<TContext> : IGenericRepository
@@ -37,7 +37,6 @@ namespace Rubrics.Data.Access
             return include.Aggregate(query, (current, item) => current.Include(item));
         }
 
-        // coming from a Linq query
         public T GetSingle<T>(Func<T, bool> where, params Expression<Func<T, object>>[] include) where T : class
         {
             IQueryable<T> query = _context.Set<T>();

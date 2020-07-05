@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using System.Text;
 
-namespace DisTrack.ViewModels
+namespace DisTrack.Commons.Models
 {
-    public class TripViewModel
+    public class TripModel
     {
         public int Id { get; set; }
         public string Departure { get; set; }
@@ -13,6 +12,6 @@ namespace DisTrack.ViewModels
         public DateTime DepartureTime { get; set; }
         public DateTime ArrivalTime { get; set; }
         public double Miles { get; set; }
-        public decimal Cost { get; set; } 
+        public decimal Cost { get; set; }
     }
 }

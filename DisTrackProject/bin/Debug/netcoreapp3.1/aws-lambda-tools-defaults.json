@@ -13,6 +13,6 @@
     "s3-prefix"     : "DisTrackProject/",
     "template"      : "serverless.template",
     "template-parameters" : "\"ShouldCreateBucket\"=\"true\";\"BucketName\"=\"\"",
-    "s3-bucket"           : "distrack",
+    "s3-bucket"           : "distrack2",
     "stack-name"          : "distrackstack"
 }

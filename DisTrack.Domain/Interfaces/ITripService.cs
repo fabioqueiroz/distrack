@@ -1,4 +1,5 @@
-﻿using DisTrack.Data;
+﻿using DisTrack.Commons.Models;
+using DisTrack.Data;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -8,6 +9,10 @@ namespace DisTrack.Domain.Interfaces
 {
     public interface ITripService
     {
-        Task<bool> AddTrip(Trip trip);
+        Task<List<TripModel>> GetAllTrips();
+        Task<TripModel> GetTripById(int id);
+        Task<bool> AddTrip(TripModel trip);
+        Task<TripModel> UpdateTrip(TripModel trip);
+        Task<bool> DeleteTripById(int id);
     }
 }
