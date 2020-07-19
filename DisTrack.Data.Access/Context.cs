@@ -42,7 +42,10 @@ namespace Rubrics.Data.Access
             {
                 optionsBuilder
                     // local connection
-                    .UseSqlServer("Data Source=LAPTOP-JEDG5RJB\\LAPSQLSERVER;Initial Catalog=DisTrack;Integrated Security=False;User Id=sa;Password=fabio1980;MultipleActiveResultSets=True");
+                    //.UseSqlServer("Data Source=LAPTOP-JEDG5RJB\\LAPSQLSERVER;Initial Catalog=DisTrack;Integrated Security=False;User Id=sa;Password=fabio1980;MultipleActiveResultSets=True");
+
+                    // azure
+                    .UseSqlServer("Server=tcp:distrack.database.windows.net,1433;Initial Catalog=distrackdb;Persist Security Info=False;User ID=fabioqueiroz;Password=Fabio1980!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;");
             }
         }
 
