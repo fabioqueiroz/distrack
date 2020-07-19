@@ -3,6 +3,7 @@ using DisTrack.Constants;
 using DisTrack.Domain.Interfaces;
 using DisTrack.Helper;
 using DisTrack.ViewModels;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -29,6 +30,7 @@ namespace DisTrack.Controllers
             return Ok("test");
         }
 
+        [EnableCors("ReactPolicy")]
         [HttpPost]
         public IActionResult SignInUser([FromBody]LoginViewModel loginDetails)
         {          

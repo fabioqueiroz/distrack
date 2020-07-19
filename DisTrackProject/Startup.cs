@@ -51,6 +51,26 @@ namespace DisTrackProject
             services.AddDbContext<Context>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection"), opts => opts.CommandTimeout((int)TimeSpan.FromMinutes(10).TotalSeconds)));
+
+
+            services.AddCors(options =>
+            {
+                options.AddPolicy("ReactPolicy",
+                    builder =>
+                    {
+                        builder.WithOrigins("http://localhost:3000")
+                                            .AllowAnyHeader()
+                                            .AllowAnyMethod();
+                    });
+
+                //options.AddDefaultPolicy(
+                //    builder =>
+                //    {
+                //        builder.WithOrigins("http://localhost:3000");
+
+                //    });
+            });
+
             // Add S3 to the ASP.NET Core dependency injection framework.
             services.AddAWSService<Amazon.S3.IAmazonS3>();
         }
@@ -66,6 +86,8 @@ namespace DisTrackProject
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseCors();
 
             app.UseAuthorization();
 
