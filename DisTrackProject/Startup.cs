@@ -52,6 +52,8 @@ namespace DisTrackProject
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection"), opts => opts.CommandTimeout((int)TimeSpan.FromMinutes(10).TotalSeconds)));
 
+            // Swagger setup
+            services.AddSwaggerGen();
 
             services.AddCors(options =>
             {
@@ -85,6 +87,16 @@ namespace DisTrackProject
 
             app.UseHttpsRedirection();
 
+            // Enable middleware to serve generated Swagger as a JSON endpoint.
+            app.UseSwagger();
+
+            // Enable middleware to serve swagger-ui (HTML, JS, CSS, etc.),
+            // specifying the Swagger JSON endpoint.
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+            });
+
             app.UseRouting();
 
             app.UseCors();
@@ -95,6 +107,8 @@ namespace DisTrackProject
             {
                 endpoints.MapControllers();
             });
+
+            app.UseSwaggerUI();
         }
     }
 }

@@ -83,5 +83,10 @@ C:\Users\fabio\OneDrive\Desktop\All Projects\C#\DisTrackProject\DisTrackProject\
 C:\Users\fabio\OneDrive\Desktop\All Projects\C#\DisTrackProject\DisTrackProject\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
 C:\Users\fabio\OneDrive\Desktop\All Projects\C#\DisTrackProject\DisTrackProject\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 C:\Users\fabio\OneDrive\Desktop\All Projects\C#\DisTrackProject\DisTrackProject\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+C:\Users\fabio\OneDrive\Desktop\All Projects\C#\DisTrackProject\DisTrackProject\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+C:\Users\fabio\OneDrive\Desktop\All Projects\C#\DisTrackProject\DisTrackProject\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\fabio\OneDrive\Desktop\All Projects\C#\DisTrackProject\DisTrackProject\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\fabio\OneDrive\Desktop\All Projects\C#\DisTrackProject\DisTrackProject\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Users\fabio\OneDrive\Desktop\All Projects\C#\DisTrackProject\DisTrackProject\obj\Debug\netcoreapp3.1\DisTrackProject.csproj.CoreCompileInputs.cache
+C:\Users\fabio\OneDrive\Desktop\All Projects\C#\DisTrackProject\DisTrackProject\obj\Debug\netcoreapp3.1\DisTrackProject.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\fabio\OneDrive\Desktop\All Projects\C#\DisTrackProject\DisTrackProject\obj\Debug\netcoreapp3.1\DisTrackProject.MvcApplicationPartsAssemblyInfo.cache
