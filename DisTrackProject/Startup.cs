@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using DisTrack.Constants;
 using DisTrack.Data.Access;
 using DisTrack.Data.Access.RepositoryInterfaces;
 using DisTrack.Domain.Interfaces;
@@ -41,23 +42,13 @@ namespace DisTrackProject
             var connectionString = new ConnectionString(Configuration.GetConnectionString("DefaultConnection"));
             services.AddSingleton(connectionString);
 
-            services
-                .AddScoped<IUserService, UserService>()
-                .AddScoped<ITripService, TripService>()
-                .AddScoped<IDisTrackRepository, DisTrackRepository>();
-
-            services.AddControllers().AddNewtonsoftJson();
-
-            services.AddDbContext<Context>(options =>
-                options.UseSqlServer(
-                    Configuration.GetConnectionString("DefaultConnection"), opts => opts.CommandTimeout((int)TimeSpan.FromMinutes(10).TotalSeconds)));
-
             // Swagger setup
             services.AddSwaggerGen();
 
+            // CORS policy
             services.AddCors(options =>
             {
-                options.AddPolicy("ReactPolicy",
+                options.AddPolicy(SystemConstants.Cors.AllowAllPolicy,
                     builder =>
                     {
                         builder.WithOrigins("http://localhost:3000")
@@ -73,8 +64,20 @@ namespace DisTrackProject
                 //    });
             });
 
+            services
+                .AddScoped<IUserService, UserService>()
+                .AddScoped<ITripService, TripService>()
+                .AddScoped<IDisTrackRepository, DisTrackRepository>();
+
+            services.AddControllers().AddNewtonsoftJson();
+
+            services.AddDbContext<Context>(options =>
+                options.UseSqlServer(
+                    Configuration.GetConnectionString("DefaultConnection"), opts => opts.CommandTimeout((int)TimeSpan.FromMinutes(10).TotalSeconds)));
+          
+
             // Add S3 to the ASP.NET Core dependency injection framework.
-            services.AddAWSService<Amazon.S3.IAmazonS3>();
+            services.AddAWSService<Amazon.S3.IAmazonS3>();           
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline
@@ -99,8 +102,9 @@ namespace DisTrackProject
 
             app.UseRouting();
 
-            app.UseCors();
-
+            //app.UseCors();
+            app.UseCors(SystemConstants.Cors.AllowAllPolicy);
+         
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

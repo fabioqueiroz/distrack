@@ -9,5 +9,10 @@ namespace DisTrack.Constants
     {
         public const string Email = "admin@test.com";
         public const string Password = "test";
+
+        public class Cors
+        {
+            public const string AllowAllPolicy = "ReactPolicy";
+        }
     }
 }

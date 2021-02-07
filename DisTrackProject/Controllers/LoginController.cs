@@ -30,7 +30,14 @@ namespace DisTrack.Controllers
             return Ok("test");
         }
 
-        [EnableCors("ReactPolicy")]
+        /// <summary>
+        /// Allow the user to sign in with email and password
+        /// </summary>
+        /// <param name="loginDetails"></param>
+        /// <returns>Returns a confirmation</returns>
+        /// <response code="200">Client signed in</response>
+        /// <response code="400">Username not found</response>
+        [EnableCors(SystemConstants.Cors.AllowAllPolicy)]
         [HttpPost]
         public IActionResult SignInUser([FromBody]LoginViewModel loginDetails)
         {          
@@ -63,6 +70,13 @@ namespace DisTrack.Controllers
             return BadRequest("Incorrect login details");
         }
 
+        /// <summary>
+        /// Allow the user to change password
+        /// </summary>
+        /// <param name="loginDetails"></param>
+        /// <returns>Returns a confirmation</returns>
+        /// <response code="200">Password modified</response>
+        /// <response code="400">Update failed</response>
         [HttpPost]
         [Route("ChangePassword")]
         public IActionResult UpdatePassword([FromBody]LoginViewModel loginDetails)
